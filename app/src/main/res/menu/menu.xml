@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--Kode program ini sebuah tombol/icon menu yang digunakan untuk
+    menampilkan account dari seorang user yang telah membuat aplikasinya
+    dengan mengklik icon yang berada disebelah kanan atas pada tampilan utama.-->
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/ic_account"
+        app:showAsAction="always"
+        android:title="about"
+        />
+
+</menu>

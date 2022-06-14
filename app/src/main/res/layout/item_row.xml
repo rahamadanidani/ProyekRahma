@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <!--kode program ini digunakan untuk menampilkan gambar yang sebelumnya kotak
+    namun pada saat gambar teesebut nanti di klik maka akan berubah tampilannya
+    menjadi lebih besar dari tampilan awal.-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_photo"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="16dp"
+        tools:src="@tools:sample/avatars" />
+
+    <!--Kode program berikut digunakan untuk menyajarkan semua tampilan/turunan
+    dalam satu arah secara vertikal.-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--Menampilkan text berupa nama dari masing-masing gambar yang telah disediakan
+         dengan mempertebal tulisannya dan mengatur ukuran textnya.-->
+        <TextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="@tools:sample/first_names" />
+
+        <!--Menampilkan text berupa kalimat yang merupakan sebuah deskripsi singkat
+        tentang menu atau makanan yang kita tampilkan-->
+        <TextView
+            android:id="@+id/tv_item_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            tools:text="@tools:sample/lorem" />
+    </LinearLayout>
+</LinearLayout>

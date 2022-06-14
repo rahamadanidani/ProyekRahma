@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_about"
+    tools:context=".About.AboutActivity">
+
+    <!--kode program berikut berfungsi untuk menyusun atau merapikan
+    tampilan dengan tampilan yang datar.-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<!--kode program berikut kita mengatur gambar yang akan ditampilan kedalam
+konten kita dan mengatur tinggi,lebar dari gambar yang akan diinputkan
+agar gambar tidak terlalu besar.-->
+        <ImageView
+            android:id="@+id/img_about_photo"
+            android:layout_width="242dp"
+            android:layout_height="232dp"
+            android:layout_marginTop="132dp"
+            android:src="@drawable/rahma"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="TODO" />
+
+<!--Menampilkan nama user yang telah membuat konten tersebut sebagai infromasi
+ bagi para pengguna.-->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="60dp"
+            android:text="Nama :"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_about_photo" />
+
+        <!--Menampilkan nama dari user yang telah membuat konten tersebut
+        dengan mengatur ukuran text pada tampilan aplikasi yang telah kita buat.-->
+        <TextView
+            android:id="@+id/tv_about_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="60dp"
+            android:text="Rahma Dani"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.146"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/img_about_photo" />
+
+        <!--Menampilkan text yang berisi email dari user yang telah
+        membuat aplikasi tersebut dengan mengatur ukuran text yang akan ditampilkan.-->
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="60dp"
+            android:text="Email :"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <!--Dimana pada kode sebelumnya memiliki hubungan dengan kode berikut
+        yang mana akan menampilkan nama email user tersebut sehingga dapat
+        dijadikan informasi bagi para pengguna pada saat menggunakan aplikasinya.-->
+        <TextView
+            android:id="@+id/tv_about_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/_203110037_students_utdi_ac_id"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_about_name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

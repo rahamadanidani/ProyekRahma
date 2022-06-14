@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--RecyclerView adalah ViewGroup yang berisi tampilan yang sesuai dengan data yang kita buat.
+Dimana akan memudahkan kita untuk menampilkan kumpulan data dalam jumlah yang besar,dengan
+tata letak yang sangat efisien atau teratur.Dan disaat kita membuka salah satu data tampilan awal
+tidak akan berubah/tidak akan kacau karena sudah diatur dengan recycler view. -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_foods"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_row" />
+</RelativeLayout>
+

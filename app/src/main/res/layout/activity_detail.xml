@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Detail.DetailActivity">
+
+<!--perintah scrollView digunakan agar konten pada layar aplikasi dapat di Scroll
+secara vertikal, karena jika tidak mengguanakan ScrollView,
+jika tampilan kita melebihi ukuran layar maka konten tersebut akan terpotong.-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        tools:ignore="UselessParent">
+
+<!--LinearLayout digunakan untuk mengelompokkan tampilan yang menyejajarkan semua
+turunan dalam satu arah, secara vertical.Dengan mengatur posisi diluar view
+digunakan perintah layout_gravity-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="224dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="50dp"
+                app:cardCornerRadius="20dp">
+
+<!--kode berikut berfungsi untuk menampilkan gambar pada proyek
+ yang mana gambarnya sudah diinputkan sebelumnya dan mengatur ukuran
+ gambar yang akan ditampilkan.-->
+                <ImageView
+                    android:id="@+id/detail_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="158dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_launcher_background" />
+
+            </androidx.cardview.widget.CardView>
+
+<!--kode program berikut berfungsi untuk menampilkan text yang berupa
+judul atau nama dari makanan yang ditampilkan.
+yang mana padding digunakan untuk mempertebal suatu konten didalam View.Yang textnya diatur
+ditengah-tengah serta mengatur jarak antara antar view dari satu objek ke objek yang lainnya. -->
+            <TextView
+                android:id="@+id/detail_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:padding="16dp"
+                tools:text="@tools:sample/first_names"
+                android:textSize="25sp" />
+
+<!-- kode berikut akan menampilkan text yang berupa keterangan dari gambar
+yang ditampilkan.Semua text yang ditampilkan berupa sebuah kalimat
+atau keterangan tentang makanan tersebut.-->
+            <TextView
+                android:id="@+id/detail_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginBottom="36dp"
+                android:justificationMode="inter_word"
+                tools:text="@tools:sample/lorem"
+                android:textSize="16sp" />
+
+<!--Tombol share ini berfungsi untuk membagikan informasi yang ada pada tampilan
+yang kepada siapa yang diinginkan oleh pengguna.-->
+                    <Button
+                        android:id="@+id/btn_share"
+                        android:layout_width="121dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="share" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>
+
+
